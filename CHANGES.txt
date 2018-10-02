@@ -1,6 +1,13 @@
 Changelog
 =========
 
+2.3.1
+-----
+
+- Requires Elgg 2.3 at minimum,
+- Handling of favicon.svg added (you need to provide a suitable favicon image in svg format... there are online converters available all around the Internet...),
+- Fixed serving of favicon.ico.
+
 2.0.0
 -----
 

@@ -7,7 +7,7 @@
         "plugin"
     ],
     "homepage": "https://github.com/iionly/favicon_override",
-    "license": "GPL-2.0",
+    "license": "GPL-2.0-only",
     "authors": [
         {
             "name": "iionly",
