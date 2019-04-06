@@ -4,12 +4,11 @@ elgg_register_event_handler('init', 'system', 'favicon_override_init');
 
 function favicon_override_init() {
 	elgg_register_plugin_hook_handler('head', 'page', 'favicon_override_head');
-
-	elgg_unregister_page_handler('favicon.ico', '_elgg_favicon_page_handler');
-	elgg_register_page_handler('favicon.ico', 'favicon_override_page_handler');
 }
 
-function favicon_override_head($hook, $type, $data) {
+function favicon_override_head(\Elgg\Hook $hook) {
+	$data = $hook->getValue();
+
 	$data['links']['apple-touch-icon'] = [
 		'rel' => 'apple-touch-icon',
 		'href' => elgg_get_simplecache_url('favicon_override/favicon-128.png'),
@@ -50,15 +49,4 @@ function favicon_override_head($hook, $type, $data) {
 	];
 
 	return $data;
-}
-
-function favicon_override_page_handler($segments) {
-	header('Expires: ' . gmdate('D, d M Y H:i:s \G\M\T', strtotime("+1 week")), true);
-	header("Pragma: public", true);
-	header("Cache-Control: public", true);
-
-	header('Content-Type: image/x-icon');
-	echo elgg_view('favicon_override/favicon.ico');
-
-	return true;
 }

@@ -1,7 +1,7 @@
-Favicon Override plugin for Elgg 2.3 and newer Elgg 2.X
+Favicon Override plugin for Elgg 3.0 and newer Elgg 3.X
 =======================================================
 
-Latest Version: 2.3.1  
+Latest Version: 3.0.0  
 Released: 2018-08-11  
 Contact: iionly@gmx.de  
 License: GNU General Public License version 2  
