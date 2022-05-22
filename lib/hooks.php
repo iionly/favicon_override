@@ -1,11 +1,5 @@
 <?php
 
-elgg_register_event_handler('init', 'system', 'favicon_override_init');
-
-function favicon_override_init() {
-	elgg_register_plugin_hook_handler('head', 'page', 'favicon_override_head');
-}
-
 function favicon_override_head(\Elgg\Hook $hook) {
 	$data = $hook->getValue();
 
